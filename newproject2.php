@@ -1,5 +1,5 @@
 <?php
-$db = new PDO('mysql:host=db; dbname=Timelord', 'root', "password");
+$db = new PDO('mysql:host=db; dbname=Timelord_2021-02-08.sql', 'root', "password");
 $query = $db->prepare("query;");
 $query->execute();
 $firstResult = $query->fetchAll();
@@ -39,7 +39,7 @@ clockwork hanging suspended in midair behind him.">
     <p><button>Add The Meddling Monk</button></p>
 
     <h2>Susan</h2>
-    <img class="images"  src="images.jpg" alt="A black and white image, Susan looks toward the camera in a leather cap and white collar.">
+    <img class="images" src="images.jpg" alt="A black and white image, Susan looks toward the camera in a leather cap and white collar.">
     <p><button>Add Susan</button></p>
 
     <h2>River Song</h2>

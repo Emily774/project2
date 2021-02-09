@@ -1,11 +1,23 @@
 <?php
-$db = new PDO('mysql:host=db; dbname=Timelord_2021-02-08.sql', 'root', "password");
-$query = $db->prepare("query;");
+$db = new PDO('mysql:host=db; dbname=Timelord', 'root', "password");
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+$query = $db->prepare('SELECT * FROM forgallifrey');
 $query->execute();
-$firstResult = $query->fetchAll();
-var_dump($firstResult);
+$forgallifreyArray = $query->fetchAll();
+//var_dump($forgallifreyArray);
+
+
+foreach ($forgallifreyArray as $item){
+   foreach($item as $key => $value){
+       echo $key.": ".$value."<br>";
+       if ($key==="No. of Adds"){
+           echo "</p><p>";
+       }
+   }
+}
 
 ?>
+
 <html lang="en-GB">
 
 <head>
@@ -20,6 +32,7 @@ var_dump($firstResult);
     <h2>The Doctor</h2>
     <img src="34DD0CEF-7DEB-4FAC-A0D5-F3E1E85C7082.jpg" class="images" alt="The Doctor (David Tennant) stares into the camera in a blue suit and against an orange background.">
    <p><button>Add The Doctor</button></p>
+
 
     <h2>The Master</h2>
     <img class="images" src="https___winteriscoming.net_files_image-exchange_2018_08_ie_35830.jpg" alt="The Master (Dhawan) stands in purple victorian dress against a dark background holding some sort of technical device menacingly.">
@@ -51,6 +64,34 @@ clockwork hanging suspended in midair behind him.">
     <p><button>Add The Rani</button></p>
 </div>
 <button>Add Your Own TimeLord</button>
+
+<form method="post">
+    <label for="Name">Name:</label>
+    <input type="text" name="Name" id="Name"/><br>
+
+    <label for="Travel">Travel:</label>
+    <input type='number' name="Travel" id="Travel"/><br>
+
+    <label for="Wisdom">Wisdom:</label>
+    <input type='number' name="Wisdom" id="Wisdom"/><br>
+
+    <label for="Inventiveness">Inventiveness:</label>
+    <input type='number' name="Inventiveness" id="Inventiveness"/><br>
+
+    <label for="Combatt">Combatt:</label>
+    <input type='number' name="Combatt" id="Combatt"/><br>
+
+    <label for="Strategy">Strategy:</label>
+    <input type='number' name="Strategy" id="Strategy"/><br>
+
+    <label for="Mind Control">Mind Control:</label>
+    <input type='number' name="Mind Control" id="Mind Control"/><br>
+
+    <label for="Knowledge">Knowledge:</label>
+    <input type='number' name="Knowledge" id="Knowledge"/><br>
+
+    <input type="submit" />
+</form>
 
 </body>
 </html>

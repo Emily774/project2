@@ -113,32 +113,34 @@ foreach ($forgallifreyArray as $timelord){
 
 <form method="post">
     <label for="Name">Name:</label>
-    <input type="text" name="Name" id="Name"/><br>
+    <input type="text" name="Name" id="Name" class="formInput"/><br>
 
     <label for="Travel">Travel:</label>
-    <input type='number' name="Travel" id="Travel"/><br>
+    <input type='number' name="Travel" id="Travel" class="formInput"/><br>
 
     <label for="Wisdom">Wisdom:</label>
-    <input type='number' name="Wisdom" id="Wisdom"/><br>
+    <input type='number' name="Wisdom" id="Wisdom" class="formInput"/><br>
 
     <label for="Inventiveness">Inventiveness:</label>
-    <input type='number' name="Inventiveness" id="Inventiveness"/><br>
+    <input type='number' name="Inventiveness" id="Inventiveness" class="formInput"/><br>
 
     <label for="Combatt">Combatt:</label>
-    <input type='number' name="Combatt" id="Combatt"/><br>
+    <input type='number' name="Combatt" id="Combatt" class="formInput" /><br>
 
     <label for="Strategy">Strategy:</label>
-    <input type='number' name="Strategy" id="Strategy"/><br>
+    <input type='number' name="Strategy" id="Strategy" class="formInput" /><br>
 
     <label for="Mind Control">Mind Control:</label>
-    <input type='number' name="Mind Control" id="Mind Control"/><br>
+    <input type='number' name="Mind Control" id="Mind Control" class="formInput" /><br>
 
     <label for="Knowledge">Knowledge:</label>
-    <input type='number' name="Knowledge" id="Knowledge"/><br>
+    <input type='number' name="Knowledge" id="Knowledge" class="formInput" /><br>
 
-    <input type="submit" />
+    <input type="submit" class="submit"/>
 </form>
-
+<footer>
+    By Louise de Mattos 2021.
+</footer>
 </body>
 </html>
 

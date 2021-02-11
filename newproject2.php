@@ -4,7 +4,8 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $query = $db->prepare('SELECT * FROM forgallifrey');
 $query->execute();
 $forgallifreyArray = $query->fetchAll();
-//var_dump($forgallifreyArray);
+
+
 ?>
 <html lang="en-GB">
 
@@ -19,7 +20,7 @@ $forgallifreyArray = $query->fetchAll();
 foreach ($forgallifreyArray as $timelord){
    foreach($timelord as $aspect => $value){
        echo $aspect.": ".$value."<br>";
-       if ($aspect==="No. of Adds"){
+       if ($aspect==="Knowledge"){
            echo "</p></div>";
        }
        if ($aspect=== "id" && $value==1){
@@ -111,30 +112,30 @@ foreach ($forgallifreyArray as $timelord){
 
 <button>Add Your Own TimeLord</button>
 
-<form method="post">
-    <label for="Name">Name:</label>
-    <input type="text" name="Name" id="Name" class="formInput"/><br>
+<form method="post" action="secondpage.php">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" class="formInput"/><br>
 
-    <label for="Travel">Travel:</label>
-    <input type='number' name="Travel" id="Travel" class="formInput"/><br>
+    <label for="travel">Travel:</label>
+    <input type='number' name="travel" id="travel" class="formInput"/><br>
 
-    <label for="Wisdom">Wisdom:</label>
-    <input type='number' name="Wisdom" id="Wisdom" class="formInput"/><br>
+    <label for="wisdom">Wisdom:</label>
+    <input type='number' name="wisdom" id="wisdom" class="formInput"/><br>
 
-    <label for="Inventiveness">Inventiveness:</label>
-    <input type='number' name="Inventiveness" id="Inventiveness" class="formInput"/><br>
+    <label for="inventiveness">Inventiveness:</label>
+    <input type='number' name="inventiveness" id="inventiveness" class="formInput"/><br>
 
-    <label for="Combatt">Combatt:</label>
-    <input type='number' name="Combatt" id="Combatt" class="formInput" /><br>
+    <label for="combatt">Combatt:</label>
+    <input type='number' name="combatt" id="combatt" class="formInput" /><br>
 
-    <label for="Strategy">Strategy:</label>
-    <input type='number' name="Strategy" id="Strategy" class="formInput" /><br>
+    <label for="strategy">Strategy:</label>
+    <input type='number' name="strategy" id="strategy" class="formInput" /><br>
 
-    <label for="Mind Control">Mind Control:</label>
-    <input type='number' name="Mind Control" id="Mind Control" class="formInput" /><br>
+    <label for="mindcontrol">Mind Control:</label>
+    <input type='number' name="mindcontrol" id="mindcontrol" class="formInput" /><br>
 
-    <label for="Knowledge">Knowledge:</label>
-    <input type='number' name="Knowledge" id="Knowledge" class="formInput" /><br>
+    <label for="knowledge">Knowledge:</label>
+    <input type='number' name="knowledge" id="knowledge" class="formInput" /><br>
 
     <input type="submit" class="submit"/>
 </form>

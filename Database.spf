@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>Timelord</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>name</key>
+			<string>localhost</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>latin1</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGvEA8LDBkaGxwdIyQlLDA0OT5VJG51bGzTDQ4PEBQYV05T
+			LmtleXNaTlMub2JqZWN0c1YkY2xhc3OjERITgAKAA4AEoxUWF4AF
+			gAaACoAOVHR5cGVUcm93c1RrZXlzXxAmU2VsZWN0aW9uRGV0YWls
+			VHlwZVByaW1hcnlLZXllZERldGFpbHPTDQ4PHiAioR+AB6EhgAiA
+			CVE0CdImJygpWiRjbGFzc25hbWVYJGNsYXNzZXNfEBNOU011dGFi
+			bGVEaWN0aW9uYXJ5oygqK1xOU0RpY3Rpb25hcnlYTlNPYmplY3TS
+			Dg8tL6EugAuADdIPMTIzWU5TLnN0cmluZ4AMUmlk0iYnNTZfEA9O
+			U011dGFibGVTdHJpbmejNTc4WE5TU3RyaW5nWE5TT2JqZWN00iYn
+			OjteTlNNdXRhYmxlQXJyYXmjOjw9V05TQXJyYXlYTlNPYmplY3TS
+			JicqP6IqQFhOU09iamVjdAAIABEAGgAkACkAMgA3AEkATABRAFMA
+			ZQBrAHIAegCFAIwAkACSAJQAlgCaAJwAngCgAKIApwCsALEA2gDh
+			AOMA5QDnAOkA6wDtAO4A8wD+AQcBHQEhAS4BNwE8AT4BQAFCAUcB
+			UQFTAVYBWwFtAXEBegGDAYgBlwGbAaMBrAGxAbQAAAAAAAACAQAA
+			AAAAAABBAAAAAAAAAAAAAAAAAAABvQ==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {891, 318}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string># ************************************************************
+# Sequel Pro SQL dump
+# Version 4541
+#
+# http://www.sequelpro.com/
+# https://github.com/sequelpro/sequelpro
+#
+# Host: 127.0.0.1 (MySQL 5.7.33)
+# Database: Timelord
+# Generation Time: 2021-02-08 16:25:39 +0000
+# ************************************************************
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+# Dump of table forgallifrey
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `forgallifrey`;
+
+CREATE TABLE `forgallifrey` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(11) DEFAULT NULL,
+  `Travel` int(11) DEFAULT NULL,
+  `Wisdom` int(11) DEFAULT NULL,
+  `Inventiveness` int(11) DEFAULT NULL,
+  `Combatt` int(11) DEFAULT NULL,
+  `Strategy` int(11) DEFAULT NULL,
+  `Mind Control` int(11) DEFAULT NULL,
+  `Knowledge` int(11) DEFAULT NULL,
+  `Users` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `forgallifrey` WRITE;
+/*!40000 ALTER TABLE `forgallifrey` DISABLE KEYS */;
+
+INSERT INTO `forgallifrey` (`id`, `name`, `Travel`, `Wisdom`, `Inventiveness`, `Combatt`, `Strategy`, `Mind Control`, `Knowledge`, `Users`)
+VALUES
+	(1,'The Doctor',13,10,13,9,12,2,12,NULL),
+	(2,'The Master',12,4,13,13,8,12,9,NULL),
+	(3,'Rassilon',6,11,12,13,13,13,13,NULL),
+	(4,'Omega',7,9,12,11,6,5,9,NULL),
+	(5,'The Monk',8,5,4,7,5,4,8,NULL),
+	(6,'Susan',10,10,2,4,3,6,5,NULL),
+	(7,'River Song',12,10,9,12,7,6,6,NULL),
+	(8,'Rani',11,9,13,12,8,4,12,NULL);
+
+/*!40000 ALTER TABLE `forgallifrey` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+SELECT `name` FROM `forgallifrey`;
+</string>
+			<key>table</key>
+			<string>forgallifrey</string>
+			<key>view</key>
+			<string>SP_VIEW_STRUCTURE</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>214</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>SELECT `name` FROM `forgallifrey`</string>
+		<string>CREATE TABLE `forgallifrey`</string>
+		<string>CREATE TABLE `FORGALLIFREY`</string>
+		<string>/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */</string>
+		<string>/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */</string>
+		<string>SELECT * FROM forgallifrey`;</string>
+		<string>SELECT * FROM `users`</string>
+		<string># ************************************************************
+# Sequel Pro SQL dump
+# Version 4541
+#
+# http://www.sequelpro.com/
+# https://github.com/sequelpro/sequelpro
+#
+# Host: 192.168.20.56 (MySQL 5.6.29)
+# Database: MailMerge
+# Generation Time: 2016-06-06 16:18:54 +0000
+# ************************************************************
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT *\/;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS *\/;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION *\/;
+/*!40101 SET NAMES utf8 *\/;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 *\/;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' *\/;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 *\/;
+
+
+# Dump of table users
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `users`;
+
+CREATE TABLE `users` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT '',
+  `email` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`id`, `name`, `email`)
+VALUES
+	(2,'Gilles Feigenbaum','TheNeedyGamer@gmail.com'),
+	(3,'Marleah Scherbaum','TheCaringGamer@gmail.com'),
+	(4,'Torrence Rothfuss','TheGracefulGamer@gmail.com'),
+	(5,'Brittaney Sharpe-logue','TheUnusualGamer@gmail.com'),
+	(6,'Conway Menzelfricke','TheChunkyGamer@gmail.com'),
+	(7,'Noami Viano','TheDraconianGamer@gmail.com'),
+	(8,'Perice Hayward','TheDullGamer@gmail.com'),
+	(9,'Alvira Mcbride','TheGlibGamer@gmail.com'),
+	(10,'Cleon Simondi','TheProbableGamer@gmail.com'),
+	(11,'Henriette Omartian','TheHorribleGamer@gmail.com'),
+	(12,'Bret Imbens','TheHalfGamer@gmail.com'),
+	(13,'Joela Feeney','TheAccessibleGamer@gmail.com'),
+	(14,'Bengt Schwartz','TheGlossyGamer@gmail.com'),
+	(15,'Melva Hadi','TheNosyGamer@gmail.com'),
+	(16,'Witty Duchemin','TheWittyGamer@gmail.com'),
+	(17,'Kaila Player','TheOverjoyedGamer@gmail.com'),
+	(18,'Carter Lightfoot','TheWickedGamer@gmail.com'),
+	(19,'Emilie Chelli','TheProudGamer@gmail.com'),
+	(20,'Gerik Hook','TheUnadvisedGamer@gmail.com'),
+	(21,'Marris Tringali','TheTrueGamer@gmail.com'),
+	(22,'Hal Maugham','TheOffbeatGamer@gmail.com'),
+	(23,'Lynnet Lietz','TheElderlyGamer@gmail.com'),
+	(24,'Brand Yoshino','TheIncandescentGamer@gmail.com'),
+	(25,'Engracia Worrad','TheClutteredGamer@gmail.com'),
+	(26,'Brandyn Awramik','TheRuralGamer@gmail.com'),
+	(27,'Hope Goto','TheViolentGamer@gmail.com'),
+	(28,'Rutherford Sharpe-logue','TheMammothGamer@gmail.com'),
+	(29,'Roseann Einhorn','TheRottenGamer@gmail.com'),
+	(30,'Franny Mcbride','TheFlagrantGamer@gmail.com'),
+	(31,'Yettie Zwicke','ThePremiumGamer@gmail.com'),
+	(32,'Padgett Feeney','TheOceanicGamer@gmail.com'),
+	(33,'Goldia Provasi','TheKindlyGamer@gmail.com'),
+	(34,'Jamill Player','TheJoblessGamer@gmail.com'),
+	(35,'Ophelia Davis','ThePunyGamer@gmail.com'),
+	(36,'Fredrick Tringali','TheUnkemptGamer@gmail.com'),
+	(37,'Ginevra Sprecher','TheExuberantGamer@gmail.com'),
+	(38,'Jayme Worrad','ThePuffyGamer@gmail.com'),
+	(39,'Sadie Ruda','TheLongGamer@gmail.com'),
+	(40,'Chris Einhorn','TheIrritatingGamer@gmail.com'),
+	(41,'Tanya Wolfe','TheGoofyGamer@gmail.com'),
+	(42,'Car Provasi','TheKindGamer@gmail.com'),
+	(43,'Leah Esser','TheLyricalGamer@gmail.com'),
+	(44,'Carly Sprecher','ThePainfulGamer@gmail.com'),
+	(45,'Sharline Houng','TheChubbyGamer@gmail.com'),
+	(46,'Rob Wolfe','TheSturdyGamer@gmail.com'),
+	(47,'Yasmin Joseph','TheEightGamer@gmail.com'),
+	(48,'Leeland Houng','TheWillingGamer@gmail.com'),
+	(49,'Pauletta Endler','TheExtra-largeGamer@gmail.com'),
+	(50,'Moritz Endler','TheRealGamer@gmail.com'),
+	(51,'Jerad Sam','ThePlantGamer@gmail.com'),
+	(52,'Emmaline Petroff','TheVariousGamer@gmail.com'),
+	(53,'Pavel Gonzales','TheSassyGamer@gmail.com'),
+	(54,'Corry Tufano','TheAcceptableGamer@gmail.com'),
+	(55,'Bendix Hoehe','TheCautiousGamer@gmail.com'),
+	(56,'Bobbi Urtz','TheWantingGamer@gmail.com'),
+	(57,'Giustino Kostruba','TheIndustriousGamer@gmail.com'),
+	(58,'Ashlee Fowell','TheTackyGamer@gmail.com'),
+	(59,'Guglielmo Coolidge','TheDiligentGamer@gmail.com'),
+	(60,'Trudi Peralta','TheSpiffyGamer@gmail.com'),
+	(61,'Shannon Rutherford','TheLackadaisicalGamer@gmail.com');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */</string>
+		<string># ************************************************************
+# Sequel Pro SQL dump
+# Version 4541
+#
+# http://www.sequelpro.com/
+# https://github.com/sequelpro/sequelpro
+#
+# Host: 192.168.20.56 (MySQL 5.6.29)
+# Database: MailMerge
+# Generation Time: 2016-06-06 16:18:54 +0000
+# ************************************************************
+
+ /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT *\/;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS *\/;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION *\/;
+/*!40101 SET NAMES utf8 *\/;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 *\/;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' *\/;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 *\/;
+
+
+# Dump of table users
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `users`;
+
+CREATE TABLE `users` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT '',
+  `email` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */</string>
+		<string># ************************************************************
+# Sequel Pro SQL dump
+# Version 4541
+#
+# http://www.sequelpro.com/
+# https://github.com/sequelpro/sequelpro
+#
+# Host: 192.168.20.56 (MySQL 5.6.29)
+# Database: MailMerge
+# Generation Time: 2016-06-06 16:18:54 +0000
+# ************************************************************
+
+ /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT *\/;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS *\/;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION *\/;
+/*!40101 SET NAMES utf8 *\/;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 *\/;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' *\/;
+!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 ;
+
+
+# Dump of table users
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `users`;
+
+CREATE TABLE `users` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT '',
+  `email` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */</string>
+		<string>UNLOCK TABLES</string>
+		<string>SELECT `name`, `DOB` FROM `adults`</string>
+		<string>SELECT * FROM `adults` GROUP BY `DOB`</string>
+		<string>INSERT INTO `colors` (`color`) VALUES ("celadon")</string>
+		<string>/* INSERT INTO `children` (`name`, `DOB`, `f_color`) VALUES ("Rex", "1994-12-09", 12); */</string>
+		<string>/* SELECT * FROM `adults` GROUP BY `DOB`;
+SELECT * FROM (`adults` INNER JOIN `children` ON `adults`.`child1`=`children`.`id`);
+INSERT INTO `colors` (`color`) VALUES (`celadon`); */
+INSERT INTO `children` (`name`, `DOB`, `f_color`) VALUES ("Rex", "1994-12-09", 12)</string>
+		<string>/* SELECT * FROM `adults` GROUP BY `DOB`;
+SELECT * FROM (`adults` INNER JOIN `children` ON `adults`.`child1`=`children`.`id`);
+INSERT INTO `colors` (`color`) VALUES (`celadon`); */
+INSERT INTO `children` (`name`, `DOB`, `f_color`) VALUES ("Rex", `1994-12-09`, 12)</string>
+		<string>/* SELECT * FROM `adults` GROUP BY `DOB`;
+SELECT * FROM (`adults` INNER JOIN `children` ON `adults`.`child1`=`children`.`id`);
+INSERT INTO `colors` (`color`) VALUES (`celadon`); */
+INSERT INTO `children` (`name`, `DOB`, `f_color`) VALUES ("Rex", 1994-12-09, 12)</string>
+		<string>/* SELECT * FROM `adults` GROUP BY `DOB`;
+SELECT * FROM (`adults` INNER JOIN `children` ON `adults`.`child1`=`children`.`id`);
+INSERT INTO `colors` (`color`) VALUES (`celadon`); */
+INSERT INTO `children` (`name`, `f_color`) VALUES ("Rex", 12)</string>
+		<string>/* SELECT * FROM `adults` GROUP BY `DOB`;
+SELECT * FROM (`adults` INNER JOIN `children` ON `adults`.`child1`=`children`.`id`);
+INSERT INTO `colors` (`color`) VALUES (`celadon`); */
+INSERT INTO `children` (`name`, `f_color`) VALUES ("Rex", "celadon")</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.33</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

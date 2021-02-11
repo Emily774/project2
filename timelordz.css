@@ -38,18 +38,18 @@ h1{
 
 .lord{
     position: relative;
-    /*margin-bottom: 20px;*/
-    /*margin-top: 20px;*/
     padding-top: 20px;
     padding-bottom: 20px;
 }
 .dataBox{
-    border: 20px ridge rgb(0,255,0) ;
+    border: 20px groove rgb(215, 31, 31);
     background-color: white;
     position: absolute;
     padding: 10px;
     right: 100px;
-    top: 75px;
+    top: 60px;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: large;
 }
 
 button{

@@ -118,7 +118,7 @@ foreach ($forgallifreyArray as $timelord){
                 </video>
                 <img class='images' src='220px-The_Rani-Kate_OMara_(1987).jpg' alt='The Rani stands looking imperious in a red and gold tunic with broad sleeves and a technical device on her arm.'>
                 <p><button>Add The Rani</button></p>";
-           echo "<p class='dataBox'>";
+           echo "<p class='dataBox'>"; 
        }
        if ($aspect=== "id" && $value>8){
            echo "<div class='lord'>";

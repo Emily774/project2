@@ -38,8 +38,8 @@ var_dump($result);
     <link rel='stylesheet" type="text/css" href="timelordz.css'>
 </head>
 <body>
-<img class='stock' src='GallifreyReturns-1-.jpg' alt='A burning red planet against a black background, lit from one side as it orbits its star.'>
-<img class='images' src='Gallifrey_Sound_of_Drums.jpg' alt='A Time Lord stands in rich flowing red robes, a red skull cap on his head and large golden collar around his neck staring into the distance from atop a bare rock, sky scrapers tower behind him encased in a huge glass dome and red-orange sky burning behind him.'>
+<img class='stock' src='Gallifrey.jpg' alt='A burning red planet against a black background, lit from one side as it orbits its star.'>
+<img class='images' src='Timelord.jpg' alt='A Time Lord stands in rich flowing red robes, a red skull cap on his head and large golden collar around his neck staring into the distance from atop a bare rock, sky scrapers tower behind him encased in a huge glass dome and red-orange sky burning behind him.'>
 <p><button>Add The TimeLord</button></p></p>
 </body>
 </html>

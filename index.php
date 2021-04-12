@@ -1,5 +1,6 @@
 <?php
-$db = new PDO('mysql:host=db; dbname=Timelord2', 'root', "password");
+//ALERT VERY IMPORTANT! DO NOT COMMIT TO GIT WITH THESE PDO DETAILS!!!!
+$db = new PDO('mysql:host=127.0.0.1; dbname=2021-louisedm-collection', 'louisedmdb', "Uin54l0~");
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $query = $db->prepare('SELECT * FROM `forgallifrey`');
 $query->execute();
@@ -26,7 +27,7 @@ $strategy=$_POST["strategy"];
 $mindControl=$_POST["mindcontrol"];
 $knowledge=$_POST["knowledge"];
 
-$db = new PDO('mysql:host=db; dbname=Timelord', 'root', "password");
+$db = new PDO('mysql:host=127.0.0.1; dbname=2021-louisedm-collection', 'louisedmdb', "Uin54l0~");
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $insertQuery = $db->prepare("INSERT INTO `forgallifrey`(`Name`, `Travel`, `Wisdom`, `Inventiveness`, `Combatt`, `Strategy`, `Mind Control`, `Knowledge`) VALUES (:Name, :Travel, :Wisdom, :Inventiveness, :Combatt, :Strategy, :MindControl, :Knowledge)");
 $insertQuery->bindParam(':Name', $name);

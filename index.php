@@ -1,5 +1,5 @@
 <?php
-$db = new PDO('mysql:host=db; dbname=Timelord', 'root', "password");
+$db = new PDO('mysql:host=db; dbname=Timelord2', 'root', "password");
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $query = $db->prepare('SELECT * FROM forgallifrey');
 $query->execute();
@@ -17,33 +17,38 @@ $forgallifreyArray = $query->fetchAll();
 
 
 <?php
-$name=$_POST["name"];
-$travel=$_POST["travel"];
-$wisdom= $_POST["wisdom"];;
-$inventiveness=$_POST["inventiveness"];
-$combatt=$_POST["combatt"];
-$strategy=$_POST["strategy"];
-$mindControl=$_POST["mindcontrol"];
-$knowledge=$_POST["knowledge"];
 
-$db = new PDO('mysql:host=db; dbname=Timelord', 'root', "password");
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-$insertQuery = $db->prepare("INSERT INTO `forgallifrey`(`Name`, `Travel`, `Wisdom`, `Inventiveness`, `Combatt`, `Strategy`, `Mind Control`, `Knowledge`) VALUES (:Name, :Travel, :Wisdom, :Inventiveness, :Combatt, :Strategy, :MindControl, :Knowledge)");
-$insertQuery->bindParam(':Name', $name);
-$insertQuery->bindParam(':Travel', $travel);
-$insertQuery->bindParam(':Wisdom', $wisdom);
-$insertQuery->bindParam(':Inventiveness', $inventiveness);
-$insertQuery->bindParam(':Combatt', $combatt);
-$insertQuery->bindParam(':Strategy', $strategy);
-$insertQuery->bindParam(':MindControl', $mindControl);
-$insertQuery->bindParam(':Knowledge', $knowledge);
+If(isset($_POST["name"])) {
+    $name = $_POST["name"];
+    $travel = $_POST["travel"];
+    $wisdom = $_POST["wisdom"];;
+    $inventiveness = $_POST["inventiveness"];
+    $combatt = $_POST["combatt"];
+    $strategy = $_POST["strategy"];
+    $mindControl = $_POST["mindcontrol"];
+    $knowledge = $_POST["knowledge"];
 
-$insertQuery->execute();
+
+    $db = new PDO('mysql:host=db; dbname=Timelord2', 'root', "password");
+    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $insertQuery = $db->prepare("INSERT INTO `forgallifrey`(`Name`, `Travel`, `Wisdom`, `Inventiveness`, `Combatt`, `Strategy`, `Mind Control`, `Knowledge`) VALUES (:Name, :Travel, :Wisdom, :Inventiveness, :Combatt, :Strategy, :MindControl, :Knowledge)");
+    $insertQuery->bindParam(':Name', $name);
+    $insertQuery->bindParam(':Travel', $travel);
+    $insertQuery->bindParam(':Wisdom', $wisdom);
+    $insertQuery->bindParam(':Inventiveness', $inventiveness);
+    $insertQuery->bindParam(':Combatt', $combatt);
+    $insertQuery->bindParam(':Strategy', $strategy);
+    $insertQuery->bindParam(':MindControl', $mindControl);
+    $insertQuery->bindParam(':Knowledge', $knowledge);
+
+    $insertQuery->execute();
+
+}
 
 foreach ($forgallifreyArray as $timelord){
    foreach($timelord as $aspect => $value){
        echo $aspect.": ".$value."<br>";
-       if ($aspect==="Knowledge"){
+       if ($aspect==="No. of Adds"){
            echo "</p></div>";
        }
        if ($aspect=== "id" && $value==1){
@@ -118,14 +123,13 @@ foreach ($forgallifreyArray as $timelord){
                 </video>
                 <img class='images' src='220px-The_Rani-Kate_OMara_(1987).jpg' alt='The Rani stands looking imperious in a red and gold tunic with broad sleeves and a technical device on her arm.'>
                 <p><button>Add The Rani</button></p>";
-           echo "<p class='dataBox'>"; 
+           echo "<p class='dataBox'>";
        }
-       if ($aspect=== "id" && $value>8){
+       if ($aspect=== "id" && $value>8) {
            echo "<div class='lord'>";
            echo "<h2>".$name."</h2>";
            echo "<img class='unknownLord' src='Gallifrey_Sound_of_Drums.jpg' alt='A Time Lord stands in rich flowing red robes, a red skull cap on his head and large golden collar around his neck staring into the distance from atop a bare rock, sky scrapers tower behind him encased in a huge glass dome and red-orange sky burning behind him.'>
-                <img class='stock' src='GallifreyReturns-1-.jpg' alt='A burning red planet against a black background, lit from one side as it orbits its star.'
-           <p></p>";
+                <img class='stock' src='GallifreyReturns-1-.jpg' alt='A burning red planet against a black background, lit from one side as it orbits its star.'>";
            echo "<p class='dataBox'>";
        }
    }
@@ -137,7 +141,7 @@ foreach ($forgallifreyArray as $timelord){
 
 <h2>Add Your Own TimeLord</h2>
 
-<form method="post" action="newproject2.php">
+<form method="post" action="index.php">
     <label for="name">Name:</label>
     <input type="text" name="name" id="name" class="formInput"/><br>
 
@@ -170,4 +174,7 @@ foreach ($forgallifreyArray as $timelord){
 </body>
 </html>
 
-
+<!--Check the isset properties and make sure not to allow null for the timelord name so that it doesn't add new timelords with every refresh-->
+<!--Get rid of id heading -->
+<!--Figue out the title issues for the last timelord-->
+<!--add image pathway option or choose file to upload buttong for the pictures-->
